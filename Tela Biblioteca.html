@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            font-size: 24px;
+        }
+
+        #container {
+            display: flex;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #menu a {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            color: #007BFF;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid #007BFF;
+        }
+
+        #menu a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        #main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .form-container button.cancel {
+            background-color: #6c757d;
+        }
+
+        .form-container button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>Sistema de Gerenciamento de Biblioteca</header>
+    <div id="container">
+        <div id="menu">
+            <a href="#">Cadastrar Livro</a>
+            <a href="#">Empréstimo</a>
+            <a href="#">Devolução</a>
+            <a href="#">Usuários</a>
+            <a href="#">Relatórios</a>
+        </div>
+        <div id="main">
+            <div class="form-container">
+                <h2>Formulário de Empréstimo de Livro</h2>
+                <label for="book-name">Nome do Livro:</label>
+                <input type="text" id="book-name" name="book-name">
+
+                <label for="user-name">Nome do Usuário:</label>
+                <input type="text" id="user-name" name="user-name">
+
+                <label for="loan-date">Data de Empréstimo:</label>
+                <input type="date" id="loan-date" name="loan-date">
+
+                <label for="return-date">Data de Devolução:</label>
+                <input type="date" id="return-date" name="return-date">
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="borrowed">Emprestado</option>
+                    <option value="returned">Devolvido</option>
+                </select>
+
+                <button type="submit">Salvar</button>
+                <button type="button" class="cancel">Cancelar</button>
+                <button type="button">Novo Cadastro</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
